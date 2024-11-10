@@ -1,3 +1,4 @@
+<?php /* Template name: Template */ ?>
 <?php get_header(); ?>
 
       <div class="row">

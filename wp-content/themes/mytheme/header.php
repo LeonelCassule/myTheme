@@ -9,7 +9,6 @@
     <!--<link rel="stylesheet" href="css/bootstrap.css">-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css" integrity="sha384-dpuaG1suU0eT09tx5plTaGMLBsfDLzUCCUXOY2j/LSvXYuG6Bqs43ALlhIqAJVRb" crossorigin="anonymous">
     
-<title>My Theme</title>
    <?php wp_head();?>
 
   </head>
@@ -21,8 +20,25 @@
       <div class="row my-5 align-items-center">
 
         <div class="col-md-8 col-sm-12">
-          <h1>WordPress Theme</h1>
-          <p class="lead">Theme || WordPress</p>
+
+        <div class="col-md-6 col-sm-12">
+
+<?php
+
+  $custom_logo_id = get_theme_mod( 'custom_logo' );
+  $logo = wp_get_attachment_image_src( $custom_logo_id, 'full' );
+
+  if ( has_custom_logo() ) {
+    echo '<img src="' . esc_url( $logo[0] ) . '" class="img-fluid">';
+  } else {
+    echo '<h1>' . get_bloginfo('name') . '</h1>';
+    echo '<p class="lead">' . get_bloginfo('description') . '</p>';
+  }
+
+?>
+
+</div>
+          
         </div>
 
         <div class="col-md-4 col-sm-12">
@@ -30,7 +46,7 @@
             <div class="input-group">
               <input type="text" class="form-control" placeholder="O que procura?">
               <div class="input-group-append">
-                <button class="btn btn-my-color-5" type="button">Procurar</button>
+               <button type="button" class="btn btn-primary" type="button">Procurar</button>
               </div>
             </div>
           </form>
@@ -65,4 +81,4 @@
 
         </div>
 
-      </div>
+</div>

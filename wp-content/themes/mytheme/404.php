@@ -4,15 +4,15 @@
 
         <div class="col-md-8 col-sm-12">
 
-          <h3 class="mb-3">Página não Encontrada</h3>
+          <h3 class="mb-3 center">404 - Página Perdida no Espaço</h3>
 
-          <p>O caminho para o conteúdo que você deseja acessar está errado ou a página pode ter sido excluída.</p>
-          <p>Esperimente realizar uma procura para encontrar o conteúdo que deseja.</p>
+          <p>A página que você está procurando foi abduzida por alienígenas. </p> 
+          <p>Mas não se preocupe, temos muitas outras coisas interessantes para explorar! <a href="http://localhost/myTheme/">Clica Aqui</a></p>
+        
 
         </div>
 
-        <?php get_sidebar(); ?>
-
+       
       </div>
 
     </div>
